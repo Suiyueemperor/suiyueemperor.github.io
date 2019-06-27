@@ -521,6 +521,407 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/Numpy基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yanshanbei">
+      <meta itemprop="description" content="燕落巫山旁，白帝归乡处">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸿雁悲歌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/uncategorized/Numpy基础知识/" class="post-title-link" itemprop="url">Numpy系列之——基础知识</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-03 01:14:31" itemprop="dateCreated datePublished" datetime="2019-03-03T01:14:31+08:00">2019-03-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-27 20:59:43" itemprop="dateModified" datetime="2019-06-27T20:59:43+08:00">2019-06-27</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Numpy学习"><a href="#Numpy学习" class="headerlink" title="Numpy学习"></a>Numpy学习</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np<span class="comment">#国际惯例</span></span><br><span class="line">np.array(object,dtype=<span class="literal">None</span>,copy=<span class="literal">True</span>,subok=<span class="literal">False</span>,ndmin=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array(&lt;class &apos;object&apos;&gt;, dtype=object)
+</code></pre><ol>
+<li>object:用于生成数组的数据对象</li>
+<li>dtype:指定类型</li>
+<li>copy:默认为True，对象被复制</li>
+<li>order:C语言（按行），Fortran（按列）或者（任意、默认）</li>
+<li>subok:默认返回基类数组，若为True，返回子类</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">15</span>).reshape(<span class="number">3</span>,<span class="number">5</span>)<span class="comment">#创建一个数组，调整为3*5</span></span><br><span class="line">print(a)<span class="comment">#打印的东西，就没有Out的标志</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3  4]
+ [ 5  6  7  8  9]
+ [10 11 12 13 14]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.shape<span class="comment">#数组的形状</span></span><br></pre></td></tr></table></figure>
+<pre><code>(3, 5)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.ndim<span class="comment">#数组的轴数量，即维度</span></span><br></pre></td></tr></table></figure>
+<pre><code>2
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.dtype<span class="comment">#数组的数据类型</span></span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&apos;int32&apos;)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.itemsize<span class="comment">#元素的字节大小</span></span><br></pre></td></tr></table></figure>
+<pre><code>4
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.data<span class="comment">#包含数组实际元素的缓冲区</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;memory at 0x063CEC60&gt;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.flags<span class="comment">#数组对象的一些状态指标或标签</span></span><br></pre></td></tr></table></figure>
+<pre><code>C_CONTIGUOUS : True
+F_CONTIGUOUS : False
+OWNDATA : False
+WRITEABLE : True
+ALIGNED : True
+WRITEBACKIFCOPY : False
+UPDATEIFCOPY : False
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(a)</span><br></pre></td></tr></table></figure>
+<pre><code>numpy.ndarray
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>])</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<pre><code>[6 7 8]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(b)</span><br></pre></td></tr></table></figure>
+<pre><code>numpy.ndarray
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/ipywidegets控件交互例子/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yanshanbei">
+      <meta itemprop="description" content="燕落巫山旁，白帝归乡处">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸿雁悲歌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/uncategorized/ipywidegets控件交互例子/" class="post-title-link" itemprop="url">jupyter中实现控件交互</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-03 01:14:31" itemprop="dateCreated datePublished" datetime="2019-03-03T01:14:31+08:00">2019-03-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-27 21:00:16" itemprop="dateModified" datetime="2019-06-27T21:00:16+08:00">2019-06-27</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="jupyter实现控件交互"><a href="#jupyter实现控件交互" class="headerlink" title="jupyter实现控件交互"></a>jupyter实现控件交互</h2><p>ipywidgets包可以实现jupyter笔记本的交互操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ipywidgets <span class="keyword">import</span> interact</span><br><span class="line"><span class="keyword">import</span> ipywidgets <span class="keyword">as</span> widgets</span><br></pre></td></tr></table></figure>
+<p>使用interact函数传入函数名及其参数可以实现交互式控件。</p>
+<h4 id="传值型参数：可以出现一个可选滚动条，选择不同参数X传入函数。"><a href="#传值型参数：可以出现一个可选滚动条，选择不同参数X传入函数。" class="headerlink" title="传值型参数：可以出现一个可选滚动条，选择不同参数X传入函数。"></a>传值型参数：可以出现一个可选滚动条，选择不同参数X传入函数。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*x</span><br><span class="line">interact(f1,x=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(IntSlider(value=10, description=&apos;x&apos;, max=30, min=-10), Output()), _dom_classes=(&apos;widget-…
+
+
+
+
+
+&lt;function __main__.f1(x)&gt;
+</code></pre><h4 id="布尔型参数：一个复选框"><a href="#布尔型参数：一个复选框" class="headerlink" title="布尔型参数：一个复选框"></a>布尔型参数：一个复选框</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line">interact(f2,x=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(Checkbox(value=True, description=&apos;x&apos;), Output()), _dom_classes=(&apos;widget-interact&apos;,))
+
+
+
+
+
+&lt;function __main__.f2(x)&gt;
+</code></pre><h4 id="文本型参数：出现文本框"><a href="#文本型参数：出现文本框" class="headerlink" title="文本型参数：出现文本框"></a>文本型参数：出现文本框</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interact(f2,x=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(Text(value=&apos;&apos;, description=&apos;x&apos;), Output()), _dom_classes=(&apos;widget-interact&apos;,))
+
+
+
+
+
+&lt;function __main__.f2(x)&gt;
+</code></pre><h4 id="列表参数：出现下拉列表"><a href="#列表参数：出现下拉列表" class="headerlink" title="列表参数：出现下拉列表"></a>列表参数：出现下拉列表</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interact(f2,x=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(Dropdown(description=&apos;x&apos;, options=(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;), value=&apos;a&apos;), Output()), _dom_classes=(…
+
+
+
+
+
+&lt;function __main__.f2(x)&gt;
+</code></pre><h4 id="字典型参数：出现下拉列表选择"><a href="#字典型参数：出现下拉列表选择" class="headerlink" title="字典型参数：出现下拉列表选择"></a>字典型参数：出现下拉列表选择</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interact(f2,x=&#123;<span class="string">'one'</span>:<span class="number">10</span>,<span class="string">'two'</span>:<span class="number">20</span>&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(Dropdown(description=&apos;x&apos;, options={&apos;one&apos;: 10, &apos;two&apos;: 20}, value=10), Output()), _dom_cla…
+
+
+
+
+
+&lt;function __main__.f2(x)&gt;
+</code></pre><h4 id="对控件进行参数设置"><a href="#对控件进行参数设置" class="headerlink" title="对控件进行参数设置"></a>对控件进行参数设置</h4><p>设置最大值、最小值、步长、默认值，变量描述</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interact(f2,x=widgets.IntSlider(min=<span class="number">-10</span>,max=<span class="number">30</span>,step=<span class="number">1</span>,value=<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>interactive(children=(IntSlider(value=10, description=&apos;x&apos;, max=30, min=-10), Output()), _dom_classes=(&apos;widget-…
+
+
+
+
+
+&lt;function __main__.f2(x)&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -702,7 +1103,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -725,7 +1126,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
