@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="Numpy学习之——数据类型1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]      dtype(&amp;apos;int32&amp;apos;) np.astype:显式地转换数据类型 12float_a = a.astype(np.float64)float_a.dtype dtype(&amp;apos;float64&amp;a">
+  <meta name="description" content="Numpy学习之——数据类型注意：下面是使用的交互文本 1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]dtype(‘int32’)  np.astype:显式地转换数据类型  12float_a = a.astype(np.float64)float_a.dtype dtype(‘float64’) 注意：n">
 <meta name="keywords" content="python,Numpy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Numpy学习之——数据类型">
 <meta property="og:url" content="http://yoursite.com/uncategorized/Numpy数据类型/index.html">
 <meta property="og:site_name" content="鸿雁悲歌">
-<meta property="og:description" content="Numpy学习之——数据类型1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]      dtype(&amp;apos;int32&amp;apos;) np.astype:显式地转换数据类型 12float_a = a.astype(np.float64)float_a.dtype dtype(&amp;apos;float64&amp;a">
+<meta property="og:description" content="Numpy学习之——数据类型注意：下面是使用的交互文本 1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]dtype(‘int32’)  np.astype:显式地转换数据类型  12float_a = a.astype(np.float64)float_a.dtype dtype(‘float64’) 注意：n">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-27T13:39:45.551Z">
+<meta property="og:updated_time" content="2019-12-09T14:02:05.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy学习之——数据类型">
-<meta name="twitter:description" content="Numpy学习之——数据类型1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]      dtype(&amp;apos;int32&amp;apos;) np.astype:显式地转换数据类型 12float_a = a.astype(np.float64)float_a.dtype dtype(&amp;apos;float64&amp;a">
+<meta name="twitter:description" content="Numpy学习之——数据类型注意：下面是使用的交互文本 1234import numpy as npa =  np.arange(1,6)print(a)a.dtype [1 2 3 4 5]dtype(‘int32’)  np.astype:显式地转换数据类型  12float_a = a.astype(np.float64)float_a.dtype dtype(‘float64’) 注意：n">
 
 
 
@@ -400,12 +400,24 @@
                 
               
 
-              <time title="创建时间：2019-06-27 21:36:06 / 修改时间：21:39:45" itemprop="dateCreated datePublished" datetime="2019-06-27T21:36:06+08:00">2019-06-27</time>
+              <time title="创建时间：2019-06-27 21:36:06" itemprop="dateCreated datePublished" datetime="2019-06-27T21:36:06+08:00">2019-06-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-09 22:02:05" itemprop="dateModified" datetime="2019-12-09T22:02:05+08:00">2019-12-09</time>
               
             
           </span>
@@ -439,44 +451,42 @@
       
 
       
-        <h2 id="Numpy学习之——数据类型"><a href="#Numpy学习之——数据类型" class="headerlink" title="Numpy学习之——数据类型"></a>Numpy学习之——数据类型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a =  np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br><span class="line">print(a)</span><br><span class="line">a.dtype</span><br></pre></td></tr></table></figure>
-<pre><code>[1 2 3 4 5]
-
-
-
-
-
-dtype(&apos;int32&apos;)
-</code></pre><p>np.astype:显式地转换数据类型</p>
+        <h1 id="Numpy学习之——数据类型"><a href="#Numpy学习之——数据类型" class="headerlink" title="Numpy学习之——数据类型"></a>Numpy学习之——数据类型</h1><p><strong>注意</strong>：下面是使用的交互文本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a =  np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br><span class="line">print(a)</span><br><span class="line">a.dtype</span><br></pre></td></tr></table></figure>
+<p>[1 2 3 4 5]<br>dtype(‘int32’)</p>
+<ol>
+<li>np.astype:显式地转换数据类型</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">float_a = a.astype(np.float64)</span><br><span class="line">float_a.dtype</span><br></pre></td></tr></table></figure>
-<pre><code>dtype(&apos;float64&apos;)
-</code></pre><p>np.string_:是修正过的ASCII字符串类型</p>
+<p>dtype(‘float64’)</p>
+<p>注意：np.string_:是修正过的ASCII字符串类型</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串转浮点数</span></span><br><span class="line">numeric_string = np.array([<span class="string">'1.23'</span>,<span class="string">'-1.20'</span>,<span class="string">'33'</span>],dtype=np.string_)</span><br><span class="line">numeric_string</span><br></pre></td></tr></table></figure>
-<pre><code>array([b&apos;1.23&apos;, b&apos;-1.20&apos;, b&apos;33&apos;], dtype=&apos;|S5&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numeric_string.astype(float)</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 1.23, -1.2 , 33.  ])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用其他数组的dtype</span></span><br><span class="line">int_array = np.arange(<span class="number">4</span>)</span><br><span class="line">print(int_array.dtype)</span><br><span class="line">old = np.array([<span class="number">3.4</span>,<span class="number">3.4</span>,<span class="number">1.0</span>])</span><br><span class="line">new = old.astype(int_array.dtype)</span><br><span class="line">new</span><br></pre></td></tr></table></figure>
-<pre><code>int32
-
-
-
-
-
-array([3, 3, 1])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">old</span><br></pre></td></tr></table></figure>
-<pre><code>array([3.4, 3.4, 1. ])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new</span><br></pre></td></tr></table></figure>
-<pre><code>array([3, 3, 1])
-</code></pre><p>Numpy还有一些预先定义的特殊值 如：<br>np.nan:缺失值，不是一个数<br>np.pi圆周率<br>np.e自然数e</p>
+<p>array([b’1.23’, b’-1.20’, b’33’], dtype=’|S5’)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numeric_string.astype(float)</span><br></pre></td></tr></table></figure>
+<p>array([ 1.23, -1.2 , 33.  ])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用其他数组的dtype</span></span><br><span class="line">int_array = np.arange(<span class="number">4</span>)</span><br><span class="line">print(int_array.dtype)</span><br><span class="line">old = np.array([<span class="number">3.4</span>,<span class="number">3.4</span>,<span class="number">1.0</span>])</span><br><span class="line">new = old.astype(int_array.dtype)</span><br><span class="line">new</span><br></pre></td></tr></table></figure>
+<p>int32<br>array([3, 3, 1])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">old</span><br></pre></td></tr></table></figure>
+<p>array([3.4, 3.4, 1. ])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new</span><br></pre></td></tr></table></figure>
+<p>array([3, 3, 1])</p>
+<ol start="2">
+<li>Numpy还有一些预先定义的特殊值 如：  <ul>
+<li>np.nan:缺失值，不是一个数  </li>
+<li>np.pi圆周率  </li>
+<li>np.e自然数e  </li>
+</ul>
+</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = np.array([np.nan,<span class="number">1</span>,<span class="number">2</span>,np.nan,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-<pre><code>array([nan,  1.,  2., nan,  3.,  4.,  5.])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[np.isnan(c)]</span><br></pre></td></tr></table></figure>
-<pre><code>array([nan, nan])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = np.array([<span class="number">1</span>,<span class="number">1</span><span class="number">-2</span>*<span class="number">2j</span>,<span class="number">5</span>,<span class="number">3</span>+<span class="number">4j</span>])</span><br><span class="line">d</span><br></pre></td></tr></table></figure>
-<pre><code>array([1.+0.j, 1.-4.j, 5.+0.j, 3.+4.j])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[np.iscomplex(d)]</span><br></pre></td></tr></table></figure>
-<pre><code>array([1.-4.j, 3.+4.j])
-</code></pre>
+<p>array([nan,  1.,  2., nan,  3.,  4.,  5.])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c[np.isnan(c)]</span><br></pre></td></tr></table></figure>
+<p>array([nan, nan])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = np.array([<span class="number">1</span>,<span class="number">1</span><span class="number">-2</span>*<span class="number">2j</span>,<span class="number">5</span>,<span class="number">3</span>+<span class="number">4j</span>])</span><br><span class="line">d</span><br></pre></td></tr></table></figure>
+<p>array([1.+0.j, 1.-4.j, 5.+0.j, 3.+4.j])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[np.iscomplex(d)]</span><br></pre></td></tr></table></figure>
+<p>array([1.-4.j, 3.+4.j])<br><br><br></p>
+
       
     </div>
 
@@ -497,7 +507,7 @@ array([3, 3, 1])
   <p><span>本文标题:</span><a href="/uncategorized/Numpy数据类型/">Numpy学习之——数据类型</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Yanshanbei 的个人博客">Yanshanbei</a></p>
   <p><span>发布时间:</span>2019年06月27日 - 21:06</p>
-  <p><span>最后更新:</span>2019年06月27日 - 21:06</p>
+  <p><span>最后更新:</span>2019年12月09日 - 22:12</p>
   <p><span>原始链接:</span><a href="/uncategorized/Numpy数据类型/" title="Numpy学习之——数据类型">http://yoursite.com/uncategorized/Numpy数据类型/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/uncategorized/Numpy数据类型/" aria-label="复制成功！"></i></span>
   </p>
@@ -630,7 +640,7 @@ array([3, 3, 1])
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -725,7 +735,7 @@ array([3, 3, 1])
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy学习之——数据类型"><span class="nav-number">1.</span> <span class="nav-text">Numpy学习之——数据类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Numpy学习之——数据类型"><span class="nav-number">1.</span> <span class="nav-text">Numpy学习之——数据类型</span></a></li></ol></div>
             
 
           </div>
